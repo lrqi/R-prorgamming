@@ -1,0 +1,25 @@
+---
+title: "My first Markdown doc"
+author: "RL"
+date: "10/24/2018"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r}
+library(datasets)
+data(airquality)
+summary(airquality)
+```
+
+```{r}
+pairs(airquality)
+```
+
+Here's a regression model of ozone on some predictors
+
+```{r}
+fit <- lm(Ozone ~ Solar.R+Wind+Temp,data=airquality)
+summary(fit)
+```
